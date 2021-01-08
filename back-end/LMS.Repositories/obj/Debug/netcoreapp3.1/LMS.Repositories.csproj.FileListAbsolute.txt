@@ -1,0 +1,15 @@
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.deps.json
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.runtimeconfig.json
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.runtimeconfig.dev.json
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.dll
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.pdb
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csprojAssemblyReference.cache
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.AssemblyInfoInputs.cache
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.AssemblyInfo.cs
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csproj.CoreCompileInputs.cache
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.dll
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.pdb
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.genruntimeconfig.cache
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Common.dll
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Common.pdb
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csproj.CopyComplete

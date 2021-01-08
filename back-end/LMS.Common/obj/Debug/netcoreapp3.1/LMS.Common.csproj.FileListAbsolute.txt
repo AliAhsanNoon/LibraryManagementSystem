@@ -1,0 +1,9 @@
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\bin\Debug\netcoreapp3.1\LMS.Common.deps.json
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\bin\Debug\netcoreapp3.1\LMS.Common.dll
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\bin\Debug\netcoreapp3.1\LMS.Common.pdb
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\obj\Debug\netcoreapp3.1\LMS.Common.AssemblyInfoInputs.cache
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\obj\Debug\netcoreapp3.1\LMS.Common.AssemblyInfo.cs
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\obj\Debug\netcoreapp3.1\LMS.Common.csproj.CoreCompileInputs.cache
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\obj\Debug\netcoreapp3.1\LMS.Common.dll
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\obj\Debug\netcoreapp3.1\LMS.Common.pdb
+D:\Code\.NET Core\LibraryManagementSystem\LMS.Common\obj\Debug\netcoreapp3.1\LMS.Common.csprojAssemblyReference.cache
