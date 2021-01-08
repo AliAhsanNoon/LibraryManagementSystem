@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rl3ZHfMnL4NR6fsSqUdzk4luN300Mde++4PN1xl19cE6wrEIg1c4J9GgrjcHhRcf6ZlbmxhY4CK5uLeDI45/eQ==",
+  "dgSpecHash": "p6xDWFcz5e3GL1iHav+w8uvkHthDf5blNimlEG2bQ57dIRAEfhbl7Ym0DNgqDLixxiu8BJQximukZjJ+o7R5sQ==",
   "success": true,
-  "projectFilePath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.API\\LMS.API.csproj",
+  "projectFilePath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.API\\LMS.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mr-Laptop\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.10\\microsoft.aspnetcore.jsonpatch.3.1.10.nupkg.sha512",
     "C:\\Users\\Mr-Laptop\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.10\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.10.nupkg.sha512",

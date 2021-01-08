@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "umAtcARnMsq3gOakEDb5LleH7xbHFdAvj1wnksCPpQAOUm+LdVdTj8AhSKkwvR+vxyMgHdSgBxcdBQBBe0WiZQ==",
+  "dgSpecHash": "RQTt9hxCC00tB5SwUYLd/zIq5pP4j78Ce/j9iaDfYTHlUyPOq5qoN6t2ckb6wOQjkHpMK0lbLRrcM5ECcN46AQ==",
   "success": true,
-  "projectFilePath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.Repositories\\LMS.Repositories.csproj",
+  "projectFilePath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.Repositories\\LMS.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mr-Laptop\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Mr-Laptop\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

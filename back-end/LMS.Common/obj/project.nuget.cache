@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nOx5uWL7UbWyeAXSYsaX6t5DOafZHdgOXU1DsSjtkZAQIwuH55IHGJnp4y3zSMTfrwvh5bkhOvMo6+tUIHVzRA==",
+  "dgSpecHash": "uAZ49Ton2F4Un29mV5tul2jONGTnqIBHrCY7Kysg6u7HPKDYkA+5kukP29KLNDWQl7F4CybCkL2X92vB/0qhUA==",
   "success": true,
-  "projectFilePath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.Common\\LMS.Common.csproj",
+  "projectFilePath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.Common\\LMS.Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

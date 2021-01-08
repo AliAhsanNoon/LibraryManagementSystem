@@ -5430,11 +5430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.API\\LMS.API.csproj",
+      "projectUniqueName": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.API\\LMS.API.csproj",
       "projectName": "LMS.API",
-      "projectPath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.API\\LMS.API.csproj",
+      "projectPath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.API\\LMS.API.csproj",
       "packagesPath": "C:\\Users\\Mr-Laptop\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.API\\obj\\",
+      "outputPath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mr-Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5451,11 +5451,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.Common\\LMS.Common.csproj": {
-              "projectPath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.Common\\LMS.Common.csproj"
+            "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.Common\\LMS.Common.csproj": {
+              "projectPath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.Common\\LMS.Common.csproj"
             },
-            "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.Repositories\\LMS.Repositories.csproj": {
-              "projectPath": "D:\\Code\\.NET Core\\LibraryManagementSystem\\LMS.Repositories\\LMS.Repositories.csproj"
+            "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.Repositories\\LMS.Repositories.csproj": {
+              "projectPath": "D:\\Code\\LibraryManagementSystem\\back-end\\LMS.Repositories\\LMS.Repositories.csproj"
             }
           }
         }

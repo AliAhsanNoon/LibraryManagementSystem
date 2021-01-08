@@ -13,3 +13,18 @@ D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3
 D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Common.dll
 D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Common.pdb
 D:\Code\.NET Core\LibraryManagementSystem\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csproj.CopyComplete
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.deps.json
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.runtimeconfig.json
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.runtimeconfig.dev.json
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.dll
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Repositories.pdb
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Common.dll
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\bin\Debug\netcoreapp3.1\LMS.Common.pdb
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csprojAssemblyReference.cache
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.AssemblyInfoInputs.cache
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.AssemblyInfo.cs
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csproj.CoreCompileInputs.cache
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.csproj.CopyComplete
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.dll
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.pdb
+D:\Code\LibraryManagementSystem\back-end\LMS.Repositories\obj\Debug\netcoreapp3.1\LMS.Repositories.genruntimeconfig.cache
