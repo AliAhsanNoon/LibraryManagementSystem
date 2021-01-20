@@ -1,0 +1,8 @@
+<p>books Listing!</p>
+<div *ngIf="errorMsg">
+    {{errorMsg}}
+</div>
+
+<div *ngIf="bookList">
+    {{bookList | json}}
+</div>

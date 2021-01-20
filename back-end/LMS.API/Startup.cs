@@ -29,6 +29,7 @@ namespace LMS.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options => options.AddPolicy("AllowOrigin", op => op.AllowAnyOrigin()));
             services.AddMvc(options => options.EnableEndpointRouting = false)
                 .AddNewtonsoftJson(op => op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddDbContext<LMSDBContext>(o => o.UseSqlServer(Configuration.GetConnectionString("LMSConnect")));
@@ -43,6 +44,7 @@ namespace LMS.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(c => c.AllowAnyOrigin());
 
             app.UseRouting();
 
