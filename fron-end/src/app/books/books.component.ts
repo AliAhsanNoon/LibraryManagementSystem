@@ -10,14 +10,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  bookList: any;
+  bookList: Book[];
   errorMsg: any;
+  displayedColumns: string[] = ['id', 'bookTitle', 'category', 'author', 'price', 'qty', 'actions'];
   constructor(private servie: BooksService, private route: ActivatedRoute) {
 
     const resolvedData: Book[] | string = this.route.snapshot.data['books'];
 
     if (Array.isArray(resolvedData)) {
       this.bookList = resolvedData;
+      console.log('books', this.bookList);
 
     } else {
       this.errorMsg = resolvedData;
