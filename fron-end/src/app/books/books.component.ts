@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../services/books.service';
 import { of } from 'rxjs';
 import { Book } from 'src/models/IBooks';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -13,7 +13,7 @@ export class BooksComponent implements OnInit {
   bookList: Book[];
   errorMsg: any;
   displayedColumns: string[] = ['id', 'bookTitle', 'category', 'author', 'price', 'qty', 'actions'];
-  constructor(private servie: BooksService, private route: ActivatedRoute) {
+  constructor(private servie: BooksService, private route: ActivatedRoute, private router: Router) {
 
     const resolvedData: Book[] | string = this.route.snapshot.data['books'];
 
@@ -24,6 +24,11 @@ export class BooksComponent implements OnInit {
     } else {
       this.errorMsg = resolvedData;
     }
+  }
+  navigateToAddBooks() {
+    console.log('navigate');
+    
+    this.router.navigate(['/books/add-book']);
   }
 
   ngOnInit(): void {
