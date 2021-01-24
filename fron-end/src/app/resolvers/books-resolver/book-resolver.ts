@@ -3,12 +3,12 @@ import { Resolve, RouterStateSnapshot } from '@angular/router';
 
 import { Book } from 'src/models/IBooks';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { BooksService } from '../services/books.service';
+import { BooksService } from '../../services/books.service';
 import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 import { of } from 'rxjs';
-import { HelperService } from '../shared/helper.service';
+import { HelperService } from '../../shared/helper.service';
 @Injectable({
     providedIn: 'root'
 })

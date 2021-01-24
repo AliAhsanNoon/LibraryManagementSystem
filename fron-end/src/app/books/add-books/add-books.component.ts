@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-interface Food {
-  value: string;
-  viewValue: string;
-}
+import { ActivatedRoute, Router } from '@angular/router';
+import { BooksService } from 'src/app/services/books.service';
+
 @Component({
   selector: 'app-add-books',
   templateUrl: './add-books.component.html',
@@ -10,16 +9,23 @@ interface Food {
 })
 
 export class AddBooksComponent implements OnInit {
-  selectedValue: string;
+  catSelectedValue: string;
+  authorSelectedValue: string;
   selectedCar: string;
+  categoriesList: any;
+  authorList: any;
 
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
-  ];
+  constructor(private service: BooksService, private route: ActivatedRoute) {
+    const authorResolved: any | string = this.route.snapshot.data['authorList'];
+    const categoriesResolved: any | string = this.route.snapshot.data['categoriesList'];
+    if (Array.isArray(categoriesResolved)) {
+      this.categoriesList = categoriesResolved;
+    }
+    if (Array.isArray(authorResolved)) {
+      this.authorList = authorResolved;
 
-  constructor() { }
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -9,6 +9,8 @@ namespace LMS.Repositories.Interfaces
     public interface IUnitOfWork
     {
         public BookRepository BookRepository { get; }
+        public AuthorRepository AuthorRepository { get; }
+        public CategoryRepository CategoryRepository { get; }
         Task<int> commitChanges();
     }
 }

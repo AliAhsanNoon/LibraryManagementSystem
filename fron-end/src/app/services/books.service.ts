@@ -12,4 +12,10 @@ export class BooksService {
   getBooksList(): Observable<Book[]> {
     return this.api.get('books/bookslist');
   }
+  loadAuthors():Observable<any>{
+    return this.api.get('author/authorlist');
+  }
+  loadCategories():Observable<any>{
+    return this.api.get('categories/categorieslist');
+  }
 }

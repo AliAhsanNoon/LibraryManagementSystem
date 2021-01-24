@@ -1,34 +1,38 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthorListResolver } from '../resolvers/auhtor-resolver/auhtor-list-resolver';
+import { BookAuthorResolver } from '../resolvers/books-author-resolver';
 
-import { BookResolver } from '../resolvers/book-resolver';
+import { BookResolver } from '../resolvers/books-resolver/book-resolver';
+import { CatgeoriesListResolver } from '../resolvers/categories-list-resolver/categories-list-resolver';
 import { AddBooksComponent } from './add-books/add-books.component';
 
 import { BooksComponent } from './books.component';
 
-const routes: Routes = [ 
+const routes: Routes = [
   {
     path: 'listing', component: BooksComponent,
     resolve: {
       books: BookResolver
-    },
-    children:[
-
-    ]
+    }
   },
 
   {
-    path: 'add-book', component: AddBooksComponent, pathMatch:'full'
+    path: 'add-book', component: AddBooksComponent, pathMatch: 'full',
+    resolve: {
+      authorList: AuthorListResolver,
+      categoriesList: CatgeoriesListResolver
+    }
   },
   {
-    path:'', redirectTo:'listing'
+    path: '', redirectTo: 'listing'
   }
 
 ];
 
 @NgModule({
   imports: [
-    
+
     RouterModule.forChild(routes),
   ],
   exports: [RouterModule],

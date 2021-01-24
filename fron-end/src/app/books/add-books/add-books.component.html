@@ -32,9 +32,9 @@
             <div class="col-md-6 col-sm-12">
                 <mat-form-field class="w-100">
                     <mat-label>Category</mat-label>
-                    <mat-select [(ngModel)]="selectedValue" name="food">
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                            {{food.viewValue}}
+                    <mat-select [(ngModel)]="catSelectedValue" name="CategoryId">
+                        <mat-option *ngFor="let categories of categoriesList" [value]="categories.id">
+                            {{categories.categoryName}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -42,9 +42,9 @@
             <div class="col-md-6 col-sm-12">
                 <mat-form-field class="w-100">
                     <mat-label>Author</mat-label>
-                    <mat-select [(ngModel)]="selectedValue" name="food">
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                            {{food.viewValue}}
+                    <mat-select [(ngModel)]="authorSelectedValue" name="AuthorId">
+                        <mat-option *ngFor="let authorList of authorList" [value]="authorList.id">
+                            {{authorList.authorName}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
