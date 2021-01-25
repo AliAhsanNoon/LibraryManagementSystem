@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,12 +10,14 @@ import { BooksService } from 'src/app/services/books.service';
 })
 
 export class AddBooksComponent implements OnInit {
+
   catSelectedValue: string;
   authorSelectedValue: string;
   categoriesList: any;
   authorList: any;
   saveBookForm: FormGroup;
-  constructor(private service: BooksService, private route: ActivatedRoute, private http: HttpClient) {
+
+  constructor(private service: BooksService, private route: ActivatedRoute) {
     const authorResolved: any | string = this.route.snapshot.data['authorList'];
     const categoriesResolved: any | string = this.route.snapshot.data['categoriesList'];
     if (Array.isArray(categoriesResolved)) {
@@ -24,7 +25,6 @@ export class AddBooksComponent implements OnInit {
     }
     if (Array.isArray(authorResolved)) {
       this.authorList = authorResolved;
-
     }
   }
 
@@ -32,6 +32,7 @@ export class AddBooksComponent implements OnInit {
     console.log('Form', saveBookForm.value);
     this.service.saveBooks(saveBookForm.value).subscribe(res => console.log('Getting Result After saving record', res));
   }
+
   ngOnInit(): void {
     this.saveBookForm = this.service.setupBookForm();
   }

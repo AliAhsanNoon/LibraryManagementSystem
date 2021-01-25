@@ -8,7 +8,6 @@ import { ApiClientService } from '../shared/api-client.service';
   providedIn: 'root'
 })
 export class BooksService {
-  private bookForm: NgForm;
 
   constructor(private api: ApiClientService, private fb: FormBuilder) { }
   getBooksList(): Observable<Book[]> {
@@ -24,14 +23,13 @@ export class BooksService {
     return this.api.post('books/savebook', data);
   }
   setupBookForm(): FormGroup {
-
     return this.fb.group({
       BookTitle: ['', Validators.required],
-      BookPrice: [0, Validators.required],
+      Price: [0, Validators.required],
       Qty: [0, Validators.required],
       BookDescription: ['',],
       CategoryId: [null],
       AuthorId: [null]
-    })
+    });
   }
 }
