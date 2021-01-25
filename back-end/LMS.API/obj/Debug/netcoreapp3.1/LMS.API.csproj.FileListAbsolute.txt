@@ -134,3 +134,4 @@ D:\Code\LibraryManagementSystem\back-end\LMS.API\obj\Debug\netcoreapp3.1\LMS.API
 D:\Code\LibraryManagementSystem\back-end\LMS.API\obj\Debug\netcoreapp3.1\LMS.API.dll
 D:\Code\LibraryManagementSystem\back-end\LMS.API\obj\Debug\netcoreapp3.1\LMS.API.pdb
 D:\Code\LibraryManagementSystem\back-end\LMS.API\obj\Debug\netcoreapp3.1\LMS.API.genruntimeconfig.cache
+D:\Code\LibraryManagementSystem\back-end\LMS.API\bin\Debug\netcoreapp3.1\libman.json

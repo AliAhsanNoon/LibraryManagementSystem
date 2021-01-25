@@ -4,7 +4,7 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books.component';
 import { AddBooksComponent } from './add-books/add-books.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
     AngularMaterialModule,
     CommonModule,
     BooksRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class BooksModule { }

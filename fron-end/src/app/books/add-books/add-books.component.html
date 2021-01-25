@@ -1,22 +1,22 @@
 <div class="container">
-    <form action="">
+    <form [formGroup]="saveBookForm" (ngSubmit)="onBookFormSubmit(saveBookForm)">
         <div class="row">
             <div class="col-md-4">
-                <mat-form-field class="w-100">
+                <mat-form-field class="w-100"  >
                     <mat-label>Book Title</mat-label>
-                    <input matInput name="BookTitle" maxlength="100" minlength="3">
+                    <input matInput name="BookTitle" formControlName='BookTitle' maxlength="100" minlength="3">
                 </mat-form-field>
             </div>
             <div class="col-md-4">
                 <mat-form-field class="w-100">
                     <mat-label>Price</mat-label>
-                    <input matInput name="BookPrice" type="number">
+                    <input matInput formControlName='BookPrice' name="BookPrice" type="number">
                 </mat-form-field>
             </div>
             <div class="col-md-4">
                 <mat-form-field class="w-100">
                     <mat-label>Qty</mat-label>
-                    <input matInput name="Qty" class="w-100" type="number">
+                    <input matInput name="Qty" class="w-100" type="number" formControlName='Qty'>
                 </mat-form-field>
             </div>
         </div>
@@ -24,7 +24,8 @@
             <div class="col-md-12">
                 <mat-form-field class="w-100">
                     <mat-label>Description</mat-label>
-                    <textarea matInput name="BookDescription" maxlength="500" class="w-100"></textarea>
+                    <textarea matInput name="BookDescription" maxlength="500" class="w-100"
+                        formControlName='BookDescription'></textarea>
                 </mat-form-field>
             </div>
         </div>
@@ -32,7 +33,7 @@
             <div class="col-md-6 col-sm-12">
                 <mat-form-field class="w-100">
                     <mat-label>Category</mat-label>
-                    <mat-select [(ngModel)]="catSelectedValue" name="CategoryId">
+                    <mat-select [(ngModel)]="catSelectedValue" name="CategoryId" formControlName='CategoryId'>
                         <mat-option *ngFor="let categories of categoriesList" [value]="categories.id">
                             {{categories.categoryName}}
                         </mat-option>
@@ -42,7 +43,7 @@
             <div class="col-md-6 col-sm-12">
                 <mat-form-field class="w-100">
                     <mat-label>Author</mat-label>
-                    <mat-select [(ngModel)]="authorSelectedValue" name="AuthorId">
+                    <mat-select [(ngModel)]="authorSelectedValue" name="AuthorId" formControlName='AuthorId'>
                         <mat-option *ngFor="let authorList of authorList" [value]="authorList.id">
                             {{authorList.authorName}}
                         </mat-option>
@@ -52,7 +53,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12">
-                <button class="btn-block" mat-raised-button color='primary'>Submit</button>
+                <button class="btn-block" type="submit" mat-raised-button color='primary'>Submit</button>
             </div>
         </div>
     </form>

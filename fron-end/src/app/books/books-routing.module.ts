@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthorListResolver } from '../resolvers/auhtor-resolver/auhtor-list-resolver';
-import { BookAuthorResolver } from '../resolvers/books-author-resolver';
 
 import { BookResolver } from '../resolvers/books-resolver/book-resolver';
 import { CatgeoriesListResolver } from '../resolvers/categories-list-resolver/categories-list-resolver';
@@ -32,7 +31,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-
     RouterModule.forChild(routes),
   ],
   exports: [RouterModule],
