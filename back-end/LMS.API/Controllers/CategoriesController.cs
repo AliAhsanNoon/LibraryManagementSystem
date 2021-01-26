@@ -28,7 +28,7 @@ namespace LMS.API.Controllers
         }
         [HttpGet]
         [Route("CategoryById/{id}")]
-        public async Task<Category> GetBookByIdAsync(int Id)
+        public async Task<Category> GetCategoryByIdAsync(int Id)
         {
             var category = await this.work.CategoryRepository.GetRecordByIdAsync(Id);
             return category;
@@ -36,15 +36,15 @@ namespace LMS.API.Controllers
 
         [HttpPost]
         [Route("SaveCategory")]
-        public async Task<Category> AddBookAsync(Category _category)
+        public async Task<Category> AddCategoryAsync(Category _category)
         {
             var category = await this.work.CategoryRepository.CreateRecordAsync(_category);
             return category;
         }
 
         [HttpPut]
-        [Route("UpdateBook")]
-        public async Task<bool> UpdateBookAsync(Category _category)
+        [Route("UpdateCategory")]
+        public async Task<bool> UpdateCategoryAsync(Category _category)
         {
             var category = await this.work.CategoryRepository.UpdateRecordAsync(_category);
             return category;
@@ -52,10 +52,9 @@ namespace LMS.API.Controllers
 
         [HttpPatch]
         [Route("DeleteCategory")]
-        public async Task<Category> DeleteBookAsync(Category _category)
+        public async Task<Category> DeleteCategoryAsync(Category _category)
         {
-            //var bookx = await this.work.BookRepository.DeleteByIdAsync(bookId.Id);
-            var category = await this.work.CategoryRepository.SoftDeleteBookAsync(_category);
+            var category = await this.work.CategoryRepository.SoftDeleteCategoryAsync(_category);
             return category;
         }
     }
