@@ -19,19 +19,15 @@ export class BooksComponent implements OnInit {
 
     if (Array.isArray(resolvedData)) {
       this.bookList = resolvedData;
-      console.log('books', this.bookList);
-
     } else {
       this.errorMsg = resolvedData;
+      
     }
   }
   navigateToAddBooks() {
-    console.log('navigate');
-
     this.router.navigate(['/books/add-book']);
   }
   delBook(id) {
-    console.log('DelId', id);
     let bookObj = {
       "Id": id,
       "IsDeleted": true

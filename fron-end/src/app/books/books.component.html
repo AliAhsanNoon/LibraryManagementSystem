@@ -5,12 +5,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12"><button mat-raised-button color='primary' (click)="navigateToAddBooks()" type="button">Add Book</button></div>
+        <div class="col-md-12"><button mat-raised-button color='primary' (click)="navigateToAddBooks()"
+                type="button">Add Book</button></div>
     </div>
 </div>
 <div class="container">
-    <table mat-table [dataSource]="bookList" class="mat-elevation-z8 mt-2 table table-hover">
-
+    <ng-container *ngIf="errorMsg" class="alert alert-danger">
+        <p class="alert alert-danger"> Server is unable to process the request. Please try again later! </p>
+    </ng-container>
+    <table *ngIf="!errorMsg" mat-table [dataSource]="bookList" class="mat-elevation-z8 mt-2 table table-hover">
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> No. </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
@@ -41,11 +44,11 @@
             <th mat-header-cell *matHeaderCellDef> Qty </th>
             <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
         </ng-container>
-        
+
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> Actions </th>
-            <td mat-cell *matCellDef="let element"> 
-                <button mat-raised-button color='warn' (click)="delBook(element.id)" class="btn-sm mr-1">Delete</button>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color='warn' (click)="delBook(element.id)" class="btn-sm mr-1 fab fa-accessible-icon"><i class=""></i>Delete</button>
                 <button mat-raised-button class='warning btn-sm'>Edit</button>
             </td>
         </ng-container>
