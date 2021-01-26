@@ -21,7 +21,7 @@ export class BooksComponent implements OnInit {
       this.bookList = resolvedData;
     } else {
       this.errorMsg = resolvedData;
-      
+
     }
   }
   navigateToAddBooks() {
@@ -33,7 +33,7 @@ export class BooksComponent implements OnInit {
       "IsDeleted": true
     };
     this.servie.deleteBooks(bookObj).subscribe(res => {
-      this.servie.getBooksList().subscribe(booksList => console.log('booklist', this.bookList = booksList))
+      this.servie.getBooksList().subscribe(booksListResp => this.bookList = booksListResp);
     })
   }
 
