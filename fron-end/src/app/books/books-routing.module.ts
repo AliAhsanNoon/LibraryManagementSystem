@@ -24,6 +24,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'add-book/:Id', component: AddBooksComponent, pathMatch: 'full',
+    resolve: {
+      authorList: AuthorListResolver,
+      categoriesList: CatgeoriesListResolver
+    }
+  },
+  {
     path: '', redirectTo: 'listing'
   }
 

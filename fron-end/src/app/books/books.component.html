@@ -45,7 +45,7 @@
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> Actions </th>
             <td mat-cell *matCellDef="let element"> 
-                <button mat-raised-button color='warn' class="btn-sm mr-1">Delete</button>
+                <button mat-raised-button color='warn' (click)="delBook(element.id)" class="btn-sm mr-1">Delete</button>
                 <button mat-raised-button class='warning btn-sm'>Edit</button>
             </td>
         </ng-container>

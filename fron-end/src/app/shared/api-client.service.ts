@@ -13,6 +13,9 @@ export class ApiClientService {
   get(path: string): Observable<any> {
     return this.http.get(`${environment.apiURL}${path}`);
   }
+  getById(path: string, Id: any): Observable<any> {
+    return this.http.get(`${environment.apiURL}${path}/${Id}`);
+  }
   post(path: string, data: any): Observable<any> {
     return this.http.post(`${environment.apiURL}${path}`, data);
   }
@@ -20,6 +23,6 @@ export class ApiClientService {
     return this.http.post(`${environment.apiURL}${path}`, data);
   }
   delete(path: string, data: any): Observable<any> {
-    return this.http.post(`${environment.apiURL}${path}`, data);
+    return this.http.patch(`${environment.apiURL}${path}`, data);
   }
 }

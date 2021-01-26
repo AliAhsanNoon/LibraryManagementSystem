@@ -48,11 +48,10 @@ namespace LMS.API.Controllers
             return bookx;
         }
 
-        [HttpDelete]
-        [Route("DeleteBook/{id}")]
+        [HttpPatch]
+        [Route("DeleteBook")]
         public async Task<Books> DeleteBookAsync(Books book)
         {
-            var query = HttpContext.Request.Query;
             //var bookx = await this.work.BookRepository.DeleteByIdAsync(bookId.Id);
             var bookx = await this.work.BookRepository.SoftDeleteBookAsync(book);
             return bookx;

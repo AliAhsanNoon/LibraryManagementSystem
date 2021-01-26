@@ -22,6 +22,12 @@ export class BooksService {
   saveBooks(data: Book): Observable<any> {
     return this.api.post('books/savebook', data);
   }
+  getBookDetailsById(Id: any): Observable<Book> {
+    return this.api.getById('books/BookById', Id);
+  }
+  deleteBooks(Id: any): Observable<any> {
+    return this.api.delete('books/DeleteBook', Id);
+  }
   setupBookForm(): FormGroup {
     return this.fb.group({
       BookTitle: ['', Validators.required],

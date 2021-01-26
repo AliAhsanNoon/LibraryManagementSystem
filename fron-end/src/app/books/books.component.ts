@@ -27,8 +27,18 @@ export class BooksComponent implements OnInit {
   }
   navigateToAddBooks() {
     console.log('navigate');
-    
+
     this.router.navigate(['/books/add-book']);
+  }
+  delBook(id) {
+    console.log('DelId', id);
+    let bookObj = {
+      "Id": id,
+      "IsDeleted": true
+    };
+    this.servie.deleteBooks(bookObj).subscribe(res => {
+      this.servie.getBooksList().subscribe(booksList => console.log('booklist', this.bookList = booksList))
+    })
   }
 
   ngOnInit(): void {
