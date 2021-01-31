@@ -22,20 +22,29 @@ export class BooksService {
   saveBooks(data: Book): Observable<any> {
     return this.api.post('books/savebook', data);
   }
-  getBookDetailsById(Id: any): Observable<Book> {
+  getBookDetailsById(Id: any): Observable<any> {
     return this.api.getById('books/BookById', Id);
   }
-  deleteBooks(Id: any): Observable<any> {
+  deleteBooks(Id: any): Observable<Book> {
     return this.api.delete('books/DeleteBook', Id);
   }
   setupBookForm(): FormGroup {
     return this.fb.group({
-      BookTitle: ['', Validators.required],
-      Price: [0, Validators.required],
-      Qty: [0, Validators.required],
-      BookDescription: ['',],
-      CategoryId: [null],
-      AuthorId: [null]
+      bookTitle: ['', Validators.required],
+      price: [0, Validators.required],
+      qty: [0, Validators.required],
+      bookDescription: ['',],
+      categoryId: [null],
+      authorId: [null]
     });
+    // return this.fb.group({
+    //   BookTitle: ['', Validators.required],
+    //   Price: [0, Validators.required],
+    //   Qty: [0, Validators.required],
+    //   BookDescription: ['',],
+    //   CategoryId: [null],
+    //   AuthorId: [null]
+    // });
   }
+
 }

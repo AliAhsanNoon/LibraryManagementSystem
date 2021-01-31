@@ -1,15 +1,15 @@
 import { Author } from './IAuthor';
 import { Category } from './ICategory';
 export interface Book {
-    Id: Number;
-    IsDeleted: boolean;
-    BookTitle: string;
-    Price: Number;
-    Qty: Number;
-    BookDescription: string;
+    id: Number;
+    isDeleted: boolean;
+    bookTitle: string;
+    price: Number;
+    qty: Number;
+    bookDescription: string;
 
-    CategoryId?: Number;
-    Category: Category;
-    AuthorId?: Number;
-    Author: Author
+    categoryId?: Number;
+    category: Category;
+    authorId?: Number;
+    author: Author;
 }

@@ -23,7 +23,7 @@ namespace LMS.API.Controllers
         [Route("CategoriesList")]
         public async Task<List<Category>> GetCategoriessAsync()
         {
-            var categoriesList = await this.work.CategoryRepository.GetAllRecordsAsync();
+            var categoriesList = await this.work.CategoryRepository.GetCategoriesDetailsAsync();
             return categoriesList;
         }
         [HttpGet]
