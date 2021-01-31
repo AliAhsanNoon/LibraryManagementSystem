@@ -27,6 +27,9 @@ export class BooksComponent implements OnInit {
   navigateToAddBooks() {
     this.router.navigate(['/books/add-book']);
   }
+  navigateToEditBooks(Id: any) {
+    this.router.navigate(['/books/add-book/', Id]);
+  }
   delBook(id) {
     let bookObj = {
       "Id": id,

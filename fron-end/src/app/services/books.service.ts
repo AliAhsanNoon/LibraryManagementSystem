@@ -25,6 +25,9 @@ export class BooksService {
   getBookDetailsById(Id: any): Observable<any> {
     return this.api.getById('books/BookById', Id);
   }
+  updateBooksRecord(data: Book): Observable<boolean> {
+    return this.api.update('books/UpdateBook', data);
+  }
   deleteBooks(Id: any): Observable<Book> {
     return this.api.delete('books/DeleteBook', Id);
   }

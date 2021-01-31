@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { BooksService } from 'src/app/services/books.service';
@@ -32,8 +32,15 @@ export class AddBooksComponent implements OnInit {
     }
   }
 
-  onBookFormSubmit(saveBookForm: any) {
-    this.service.saveBooks(saveBookForm.value).subscribe(res => console.log('Getting Result After saving record', res));
+  onBookFormSubmit(saveBookForm: NgForm) {
+    if (this.id != null) {
+      this.book = saveBookForm.value;
+      this.book.id = this.id;
+      this.service.updateBooksRecord(this.book).subscribe(res => console.log('Book Updated Successfully', res));
+    } else {
+      this.service.saveBooks(saveBookForm.value).subscribe(res => console.log('Getting Result After saving record', res));
+
+    }
   }
 
   ngOnInit(): void {

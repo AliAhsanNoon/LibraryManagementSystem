@@ -20,7 +20,7 @@ export class ApiClientService {
     return this.http.post(`${environment.apiURL}${path}`, data);
   }
   update(path: string, data: any): Observable<any> {
-    return this.http.post(`${environment.apiURL}${path}`, data);
+    return this.http.put(`${environment.apiURL}${path}`, data);
   }
   delete(path: string, data: any): Observable<any> {
     return this.http.patch(`${environment.apiURL}${path}`, data);
