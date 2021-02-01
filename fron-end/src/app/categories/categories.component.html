@@ -1,1 +1,56 @@
-<p>categories works!</p>
+<div class="container" color=''>
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-muted">Categories Listing</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><button mat-raised-button color='primary' (click)="navigateToAddBooks()"
+                type="button">Add Categories</button></div>
+    </div>
+</div>
+<div class="container">
+    <ng-container *ngIf="errorMsg" class="alert alert-danger">
+        <p class="alert alert-danger"> Server is unable to process the request. Please try again later! </p>
+    </ng-container>
+    <table *ngIf="!errorMsg" mat-table [dataSource]="categoriesList" class="mat-elevation-z8 mt-2 table table-hover">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+
+        <ng-container matColumnDef="categoryName">
+            <th mat-header-cell *matHeaderCellDef> Category Name</th>
+            <td mat-cell *matCellDef="let element"> {{element.categoryName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bookList">
+            <th mat-header-cell *matHeaderCellDef> Book List</th>
+            <td mat-cell *matCellDef="let element"> 
+                <mat-form-field class="w-100">
+                    <mat-label>Category</mat-label>
+                    <mat-select [(ngModel)]="bookSelectedValue" name="CategoryId" >
+                        <mat-option *ngFor="let books of bookList" [value]="books.id">
+                            {{books.bookTitle}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color='warn' (click)="delBook(element.id)"
+                    class="btn-sm mr-1 fab fa-accessible-icon"><i class=""></i>Delete</button>
+                <button mat-raised-button class='btn-warning btn-sm'
+                    (click)="navigateToEditBooks(element.id)">Edit</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
