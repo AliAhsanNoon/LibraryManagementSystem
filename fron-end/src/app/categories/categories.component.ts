@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/models/ICategory';
 import { CategoriesService } from '../services/categories.service';
 
@@ -11,14 +11,14 @@ import { CategoriesService } from '../services/categories.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'categoryName','bookList', 'actions'];
+  displayedColumns: string[] = ['id', 'categoryName', 'bookList', 'actions'];
   errorMsg: any;
   bookSelectedValue: string;
   categoriesList: Category[];
   bookList: any[] = [];
   saveCategoriesForm: FormGroup;
-
-  constructor(private service: CategoriesService, private activatedRoute: ActivatedRoute) {
+  
+  constructor(private service: CategoriesService, private activatedRoute: ActivatedRoute, private router: Router) {
     // const bookResolved: any | string = this.activatedRoute.snapshot.data['books'];
     // if (Array.isArray(bookResolved)) {
 
@@ -34,20 +34,20 @@ export class CategoriesComponent implements OnInit {
     });
   }
 
-  navigateToAddBooks() {
-    //this.router.navigate(['/books/add-book']);
+  navigateToAddCategories() {
+    this.router.navigate(['/categories/save-categories']);
   }
-  navigateToEditBooks(Id: any) {
-    //this.router.navigate(['/books/add-book/', Id]);
+  navigateToEditCategories(Id: any) {
+    this.router.navigate(['/categories/save-categories/', Id]);
   }
-  delBook(id) {
-    let bookObj = {
+  delCat(id) {
+    let catObj = {
       "Id": id,
       "IsDeleted": true
     };
-    // this.servie.deleteBooks(bookObj).subscribe(res => {
-    //   this.servie.getBooksList().subscribe(booksListResp => this.bookList = booksListResp);
-    // })
+    this.service.deleteCategory(catObj).subscribe(res => {
+      this.service.getCategoriesList().subscribe(catListResp => this.categoriesList = catListResp);
+    })
   }
 
 }
