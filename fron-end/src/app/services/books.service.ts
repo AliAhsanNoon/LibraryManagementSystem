@@ -40,14 +40,7 @@ export class BooksService {
       categoryId: [null],
       authorId: [null]
     });
-    // return this.fb.group({
-    //   BookTitle: ['', Validators.required],
-    //   Price: [0, Validators.required],
-    //   Qty: [0, Validators.required],
-    //   BookDescription: ['',],
-    //   CategoryId: [null],
-    //   AuthorId: [null]
-    // });
+
   }
 
 }

@@ -3,13 +3,13 @@
 import { Book } from "./IBooks";
 
 export interface Author {
-    Id: Number;
-    IsDeleted: boolean;
-    AuthorName: string;
-    DOB: Date;
-    EmailAddress: string;
-    PhoneNo: string;
-    City: string;
-    ResidenceAddress: string;
-    BooksList: Book[]
+    id: Number;
+    isDeleted: boolean;
+    authorName: string;
+    dob: Date;
+    emailAddress: string;
+    phoneNo: string;
+    city: string;
+    residenceAddress: string;
+    booksList: Book[]
 }

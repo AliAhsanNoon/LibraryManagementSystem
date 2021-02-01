@@ -1,1 +1,61 @@
-<p>authors works!</p>
+<div class="container" color=''>
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-muted">Authors Listing</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><button mat-raised-button color='primary' (click)="navigateToAddAuthor()"
+                type="button">Add Athor</button></div>
+    </div>
+</div>
+<div class="container">
+    <!-- <ng-container *ngIf="errorMsg" class="alert alert-danger">
+        <p class="alert alert-danger"> Server is unable to process the request. Please try again later! </p>
+    </ng-container> -->
+    <table mat-table [dataSource]="authorList" class="mat-elevation-z8 mt-2 table table-hover">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+
+        <ng-container matColumnDef="authorName">
+            <th mat-header-cell *matHeaderCellDef> Author Name</th>
+            <td mat-cell *matCellDef="let element"> {{element.authorName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="emailAddress">
+            <th mat-header-cell *matHeaderCellDef> Email Address</th>
+            <td mat-cell *matCellDef="let element"> {{element.emailAddress}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="booksList">
+            <th mat-header-cell *matHeaderCellDef> Books Written</th>
+            <td mat-cell *matCellDef="let element">
+                <mat-form-field class="w-100">
+                    <mat-label>Books Collection</mat-label>
+                    <mat-select [(ngModel)]="authorSelected" name="booksList">
+                        <mat-option *ngFor="let books of element.booksList" [value]="books.id">
+                            {{books.bookTitle}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color='warn' (click)="delAuthor(element.id)"
+                    class="btn-sm mr-1 fab fa-accessible-icon"><i class=""></i>Delete</button>
+                <button mat-raised-button class='btn-warning btn-sm'
+                    (click)="navigateToEditAuthor(element.id)">Edit</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

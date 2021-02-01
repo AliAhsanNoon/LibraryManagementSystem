@@ -19,7 +19,19 @@ namespace LMS.Repositories.Implementation
 
         public async Task<List<Author>> GetAuthorsDetailsAsync()
         {
-            return await this.dbContext.Authors.Where(del => del.IsDeleted == false).ToListAsync();
+            return await this.dbContext.Authors.Where(del => del.IsDeleted == false).Include(books => books.BooksList).ToListAsync();
+        }
+
+        public async Task<Author> SoftDeleteBookAsync(Author author)
+        {
+            var entity = await this.dbContext.Authors.FindAsync(author.Id);
+            if (entity != null)
+            {
+                entity.IsDeleted = author.IsDeleted;
+                this.dbContext.Entry(entity).State = EntityState.Modified;
+                await this.dbContext.SaveChangesAsync();
+            }
+            return entity;
         }
     }
 }

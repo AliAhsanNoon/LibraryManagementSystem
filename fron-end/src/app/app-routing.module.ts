@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [{ path: 'books', loadChildren: () => import('./books/books.module').then(m => m.BooksModule) },
 
-{ path: 'auhtors', loadChildren: () => import('./authors/authors.module').then(m => m.AuthorsModule) },
+{ path: 'authors', loadChildren: () => import('./authors/authors.module').then(m => m.AuthorsModule) },
 
 { path: 'categories', loadChildren: () => import('./categories/categories.module').then(m => m.CategoriesModule) }
 
