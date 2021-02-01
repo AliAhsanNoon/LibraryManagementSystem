@@ -5,9 +5,7 @@ import { BookResolver } from '../resolvers/books-resolver/book-resolver';
 import { CategoriesComponent } from './categories.component';
 
 const routes: Routes = [{
-  path: 'listing', component: CategoriesComponent, resolve: {
-    books: BookResolver
-  }
+  path: 'listing', component: CategoriesComponent
 }];
 
 @NgModule({

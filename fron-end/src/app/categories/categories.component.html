@@ -28,11 +28,11 @@
 
         <ng-container matColumnDef="bookList">
             <th mat-header-cell *matHeaderCellDef> Book List</th>
-            <td mat-cell *matCellDef="let element"> 
+            <td mat-cell *matCellDef="let element">
                 <mat-form-field class="w-100">
-                    <mat-label>Category</mat-label>
-                    <mat-select [(ngModel)]="bookSelectedValue" name="CategoryId" >
-                        <mat-option *ngFor="let books of bookList" [value]="books.id">
+                    <mat-label>Books Collection</mat-label>
+                    <mat-select [(ngModel)]="bookSelectedValue" name="booksList">
+                        <mat-option *ngFor="let books of element.booksList" [value]="books.id">
                             {{books.bookTitle}}
                         </mat-option>
                     </mat-select>

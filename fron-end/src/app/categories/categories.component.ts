@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { Book } from 'src/models/IBooks';
 import { Category } from 'src/models/ICategory';
 import { CategoriesService } from '../services/categories.service';
 
@@ -12,26 +11,27 @@ import { CategoriesService } from '../services/categories.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'categoryName', 'bookList', 'actions'];
+  displayedColumns: string[] = ['id', 'categoryName','bookList', 'actions'];
   errorMsg: any;
   bookSelectedValue: string;
   categoriesList: Category[];
-  bookList: Book[];
+  bookList: any[] = [];
   saveCategoriesForm: FormGroup;
 
   constructor(private service: CategoriesService, private activatedRoute: ActivatedRoute) {
-    const bookResolved: any | string = this.activatedRoute.snapshot.data['books'];
-    if (Array.isArray(bookResolved)) {
-      this.bookList = bookResolved;
-      console.log('BookResolved', this.bookList);
+    // const bookResolved: any | string = this.activatedRoute.snapshot.data['books'];
+    // if (Array.isArray(bookResolved)) {
 
-    } else {
-      this.errorMsg = bookResolved;
-    }
+
+    // } else {
+    //   this.errorMsg = bookResolved;
+    // }
   }
 
   ngOnInit(): void {
-    this.service.getCategoriesList().subscribe(res => this.categoriesList = res);
+    this.service.getCategoriesList().subscribe((res: Category[]) => {
+      this.categoriesList = res;
+    });
   }
 
   navigateToAddBooks() {

@@ -19,7 +19,7 @@ namespace LMS.Repositories.Implementation
 
         public async Task<List<Category>> GetCategoriesDetailsAsync()
         {
-            return await this.dbContext.Categories.Where(c => c.IsDeleted == false).ToListAsync();
+            return await this.dbContext.Categories.Where(c => c.IsDeleted == false).Include(books => books.BooksList).ToListAsync();
         }
 
         public async  Task<Category> SoftDeleteCategoryAsync(Category category)
