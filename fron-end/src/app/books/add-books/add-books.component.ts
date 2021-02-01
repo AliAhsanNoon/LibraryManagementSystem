@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { first } from 'rxjs/operators';
+import { FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
 import { Book } from 'src/models/IBooks';
 
@@ -32,21 +31,19 @@ export class AddBooksComponent implements OnInit {
     }
   }
 
-  onBookFormSubmit(saveBookForm: NgForm) {
+  onBookFormSubmit(saveBookForm: FormGroup) {
     if (this.id != null) {
       this.book = saveBookForm.value;
       this.book.id = this.id;
       this.service.updateBooksRecord(this.book).subscribe(res => console.log('Book Updated Successfully', res));
     } else {
       this.service.saveBooks(saveBookForm.value).subscribe(res => console.log('Getting Result After saving record', res));
-
     }
   }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['Id'];
     this.saveBookForm = this.service.setupBookForm();
-
     if (this.id != null) {
       this.service.getBookDetailsById(this.id).subscribe((res) => {
         this.book = res;
